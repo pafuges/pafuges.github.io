@@ -4,13 +4,38 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/post/undefined.html"/>
-      <url>/post/undefined.html</url>
+      <title>233</title>
+      <link href="/year/07/16/233/"/>
+      <url>/year/07/16/233/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/.com//233%5C629cdcc58af14.png" alt="629cdcc58af14"></p>]]></content>
       
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo的butterfly主题美化教程</title>
+      <link href="/year/07/16/Hexo%E7%9A%84butterfly%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/"/>
+      <url>/year/07/16/Hexo%E7%9A%84butterfly%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我的这个站点是采用<a href="https://hexo.io/">HEXO</a>静态博客，相关配置可能会比较麻烦不如wordpress等php博客有着后台等简单的控制内容，所以新手可以先去了解前端等内容再来配置也不迟~我也是前端萌新，所以站点美化都是跟着<a href="https://tzy1997.com/">唐志远の博客</a>进行的美化，个别美化项目并未添加可能后续会加上，加上后都会写到这个文章中</p><h3 id="公告栏下方的互动小人"><a href="#公告栏下方的互动小人" class="headerlink" title="公告栏下方的互动小人"></a>公告栏下方的互动小人</h3><p><img src="/images/629cdcc58af14.png"></p><p>在BlogRoot&#x2F;node_modules&#x2F;hexo-theme-butterfly&#x2F;layout&#x2F;includes&#x2F;widget&#x2F;card_announcement.pug下添加如下代码：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">if theme.aside.card_announcement.enable</span><br><span class="line">  .card-widget.card-announcement</span><br><span class="line">    .item-headline</span><br><span class="line">      i.fas.fa-bullhorn.card-announcement-animation</span><br><span class="line">      span= _p(&#x27;aside.card_announcement&#x27;)</span><br><span class="line">    .announcement_content!= theme.aside.card_announcement.content</span><br><span class="line">+  .xpand(style=&#x27;height:200px;&#x27;)</span><br><span class="line">+    canvas.illo(width=&#x27;800&#x27; height=&#x27;800&#x27; style=&#x27;max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;&#x27;)</span><br><span class="line">+script(src=&#x27;https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople1.js&#x27;)</span><br><span class="line">+script(src=&#x27;https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/zdog.dist.js&#x27;)</span><br><span class="line">+script#rendered-js(src=&#x27;https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople.js&#x27;)</span><br><span class="line">+style.</span><br><span class="line">+  .card-widget.card-announcement &#123;</span><br><span class="line">+  margin: 0;</span><br><span class="line">+  align-items: center;</span><br><span class="line">+  justify-content: center;</span><br><span class="line">+  text-align: center;</span><br><span class="line">+  &#125;</span><br><span class="line">+  canvas &#123;</span><br><span class="line">+  display: block;</span><br><span class="line">+  margin: 0 auto;</span><br><span class="line">+  cursor: move;</span><br><span class="line">+  &#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 美化教程 </tag>
+            
+        </tags>
       
     </entry>
     
